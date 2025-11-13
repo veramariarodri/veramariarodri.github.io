@@ -16,7 +16,12 @@ body {
 
 /* Navigation Bar Container */
 .navbar {
+      position: sticky;
+       top: 0;
+  padding: 1em;
+  z-index: 1000;
     background-color: #A40909;
+    height: 90px;
     padding: 0px;
     display: flex;
     justify-content: space-between;
@@ -24,6 +29,68 @@ body {
     margin-bottom: 0px;
     border-radius: 0px;
 }
+
+/* This is an image carousel */
+
+.carousel {
+  position: relative;
+  width: 100vw;        /* full viewport width */
+  height: 100vh;       /* optional: full viewport height */
+  overflow: hidden;
+}
+
+.carousel img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0;
+  animation: fade 15s infinite;
+}
+
+/* Each image starts fading at a different time */
+.carousel img:nth-child(1) {
+  animation-delay: 0s;
+}
+.carousel img:nth-child(2) {
+  animation-delay: 5s;
+}
+.carousel img:nth-child(3) {
+  animation-delay: 10s;
+}
+
+/* Keyframes for fade animation */
+@keyframes fade {
+  0% { opacity: 0; }
+  5% { opacity: 1; }
+  30% { opacity: 1; }
+  35% { opacity: 0; }
+  100% { opacity: 0; }
+}
+
+/* === TEXT OVERLAY === */
+.carousel-text {
+  position: absolute;
+  top: 45%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  text-align: center;
+  z-index: 2; /* above the images */
+}
+
+.carousel-text h1,
+.carousel-text p {
+  color: white;
+  text-shadow:
+    2px 2px 0px blue,
+   -2px 2px 0px blue,
+    2px -2px 0px blue,
+   -2px -2px 0px blue;
+}
+
 
 /* Logo Styling */
 .logo img {
@@ -56,24 +123,12 @@ body {
     color: #FFC300;
 }
 
-/* Hero Section with Image Background */
-.hero-section {
-    background-image: url('food-image.png');
-    background-size: cover;
-    background-position: center;
-    height: 800px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: red;
-    text-align: center;
-    position: relative;
-    border-radius: 0px;
-    margin-bottom: 0px;
-}
+
 
 /* Body text */
 .content-section {
+    border: solid 5px blue;
+    width: 90vw;
     background-color: #FFFFFF;
     background-size: cover;
     background-position: center;
@@ -86,15 +141,23 @@ body {
     position: relative;
     border-radius: 0px;
     margin-bottom: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #A40909;
+    text-align: left;
+    border-radius: 5px;
+    margin: 0 auto;
+    margin-bottom: 60px;
 }
 
 /* Quote Bar Container */
 .quotebar {
-    background-color: #A40909;
+    background-color: #FFC300;
     padding: 10px;
     display: flex;
-    position: relative;
-    justify-content: space-between;
+    position: center;
+    justify-content: center;
     align-items: center;
     color: white;
     text-align: center;
@@ -102,18 +165,48 @@ body {
     border-radius: 0px;
 }
 
-/* App text */
-.app-section {
+/* Menu text */
+.menu-section {
+    border: solid 5px blue;
+    width: 70vw;
     background-color: #FFFFFF;
     background-size: cover;
     background-position: center;
-    height: 800px;
+    height: 200vw;
     display: flex;
     justify-content: center;
     align-items: center;
     color: #A40909;
     text-align: left;
     position: relative;
-    border-radius: 0px;
+    border-radius: 5px;
+    margin: 0 auto;
     margin-bottom: 60px;
 }
+
+/* about Section */
+.about-section {
+    border: solid 5px blue;
+    width: 90vw;
+    background-color: #FFFFFF;
+    background-size: cover;
+    background-position: center;
+    height: 1200px;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    color: #A40909;
+    text-align: left;
+    position: relative;
+    border-radius: 0px;
+    margin-bottom: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #A40909;
+    text-align: left;
+    border-radius: 5px;
+    margin: 0 auto;
+    margin-bottom: 60px;
+}
+
