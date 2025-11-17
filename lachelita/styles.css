@@ -188,7 +188,7 @@ body {
     background-color: #FFFFFF;
     background-size: cover;
     background-position: center;
-    height: 300vw;
+    height: 250vw;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -243,4 +243,5 @@ body {
 
 .text-module{
     width:300px;
+
 }
