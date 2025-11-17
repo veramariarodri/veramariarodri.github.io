@@ -188,7 +188,7 @@ body {
     background-color: #FFFFFF;
     background-size: cover;
     background-position: center;
-    height: 280vw;
+    height: 450vw;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -245,6 +245,7 @@ body {
     width:300px;
 
 }
+
 
 
 
