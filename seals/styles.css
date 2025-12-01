@@ -1,0 +1,148 @@
+@import url('https://fonts.googleapis.com/css2?family=Delius&display=swap');
+
+/* Basic Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Body Styling */
+body {
+  font-family: "Delius", cursive;
+  background-color: white;
+}
+
+/* Navigation Bar */
+.topnav {
+
+  overflow: hidden;
+  background-color: #0075D8;
+  display: flex;
+  align-items: center;
+}
+
+.topnav a {
+  display: block;
+  color: #6FB4F3;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+
+
+
+@media screen and (max-width: 600px) {
+  .topnav {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .topnav a,
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 20px;
+}
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px grey;
+  border-radius: 10px;
+}
+::-webkit-scrollbar-thumb {
+  background: #6FB4F3;
+  border-radius: 5px;
+}
+
+/* Image Grid */
+.image-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 3em;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.sub-image-grid {
+  display: flex;
+  gap: 3em;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Container for each image + overlay */
+.container {
+  position: relative;
+  width: 200px; /* adjust as needed */
+  display: inline-block;
+}
+
+.container a {
+  display: block;
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.container img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 5px;
+}
+
+/* Overlay covers the entire image */
+.overlay {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  opacity: 0;
+  transition: .5s ease;
+  background-color: rgba(0, 140, 186, 0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-size: 20px;
+  text-decoration: none;
+}
+
+.container:hover .overlay {
+  opacity: 1;
+}
+
+/* Body text */
+.bodytext {
+    height: 10vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #0075D8;
+    text-align: left;
+    margin: 0 auto;
+    margin-bottom: 50px;
+}
+
+
+.music {
+  position: absolute;
+    display: flex;
+  right: 50px;
+  down: 100px; 
+  margin-top:20px;
+}
+
+/* Cursor */
+a:hover {
+  cursor: url('https://cur.cursors-4u.net/symbols/sym-6/sym599.cur'), auto;
+}
+body {
+  cursor: url('https://cur.cursors-4u.net/symbols/sym-6/sym597.cur'), auto;
+}
