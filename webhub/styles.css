@@ -26,7 +26,7 @@ body {
 .image-grid {
   display: flex;
   flex-direction: column;
-  gap: 3em;
+  gap: 2em;
   justify-content: center;
   align-items: center;
   margin-top: 50px;
@@ -35,7 +35,7 @@ body {
 
 .sub-image-grid {
   display: flex;
-  gap: 3em;
+  gap: 2em;
   justify-content: center;
   align-items: center;
 }
@@ -43,7 +43,7 @@ body {
 /* Container for each image + overlay */
 .container {
   position: relative;
-  width: 200px; /* adjust as needed */
+  width: 250px; /* adjust as needed */
   display: inline-block;
 }
 
@@ -143,4 +143,5 @@ a:hover {
 }
 body {
   cursor: url('https://cur.cursors-4u.net/symbols/sym-6/sym597.cur'), auto;
+
 }
